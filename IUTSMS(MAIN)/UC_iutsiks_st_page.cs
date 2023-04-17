@@ -49,21 +49,28 @@ namespace IUTSMS_MAIN_
 
         private void zakah_calculate_button_Click(object sender, EventArgs e)
         {
-            int balance =Convert.ToInt32(zakah_bank_balance_textbox.Text);
-            int investment = Convert.ToInt32(zakah_investment_text_box.Text);
-            int loan= Convert.ToInt32(zakah_loan_amount_textbox.Text);
-            int payable=Convert.ToInt32(zakah_payable_textbox.Text);
-            int net=balance+investment+loan-payable;
+            try
+            {
+                int balance = Convert.ToInt32(zakah_bank_balance_textbox.Text);
+                int investment = Convert.ToInt32(zakah_investment_text_box.Text);
+                int loan = Convert.ToInt32(zakah_loan_amount_textbox.Text);
+                int payable = Convert.ToInt32(zakah_payable_textbox.Text);
+                int net = balance + investment + loan - payable;
 
-            double zakah = net * 0.025;
-            if (net < 100000)
-            {
-                throw new Exception("Your Nisab is not enough to provide Zakah.");
+                double zakah = net * 0.025;
+                if (net < 100000)
+                {
+                    throw new Exception("Your Nisab is not enough to provide Zakah.");
+                }
+                else
+                {
+                    zakah_net_amount_textbox.Text = Convert.ToString(net);
+                    zakah_net_zakah_textbox.Text = Convert.ToString(zakah);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                zakah_net_amount_textbox.Text = Convert.ToString(net);
-                zakah_net_zakah_textbox.Text = Convert.ToString(zakah);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -76,6 +83,11 @@ namespace IUTSMS_MAIN_
             zakah_payable_textbox.Clear();
             zakah_net_amount_textbox.Clear();
             zakah_net_zakah_textbox.Clear();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
