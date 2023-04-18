@@ -89,5 +89,11 @@ namespace IUTSMS_MAIN_
         {
 
         }
+
+        private void fb_button_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/iutsiks");
+
+        }
     }
 }
