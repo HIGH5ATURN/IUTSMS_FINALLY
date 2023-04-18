@@ -63,7 +63,7 @@ namespace IUTSMS_MAIN_
                 if(login_u_id_textBox.Text=="admincs" && login_pass_textBox.Text=="passcs")
                 {
                    new CS_admin().Show();
-                    this.Hide();
+                   this.Hide();
                 }
                 else
                 {
@@ -87,7 +87,8 @@ namespace IUTSMS_MAIN_
             {
                 if (login_u_id_textBox.Text == "adminsiks" && login_pass_textBox.Text == "passsiks")
                 {
-                    //will take to SIKS_admin_form
+                    new SIKS_admin().Show();
+                    this.Hide();
                 }
                 else
                 {

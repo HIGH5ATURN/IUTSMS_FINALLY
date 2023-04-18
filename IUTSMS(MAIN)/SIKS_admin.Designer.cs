@@ -1,6 +1,6 @@
 ﻿namespace IUTSMS_MAIN_
 {
-    partial class DS_admin
+    partial class SIKS_admin
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,13 @@
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1124, -2);
+            this.gunaControlBox2.Location = new System.Drawing.Point(957, 1);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox2.Size = new System.Drawing.Size(47, 43);
-            this.gunaControlBox2.TabIndex = 8;
+            this.gunaControlBox2.TabIndex = 10;
             // 
             // gunaControlBox1
             // 
@@ -57,25 +57,25 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1177, -2);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1010, 1);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox1.Size = new System.Drawing.Size(41, 43);
-            this.gunaControlBox1.TabIndex = 7;
+            this.gunaControlBox1.TabIndex = 9;
             // 
-            // DS_admin
+            // SIKS_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 558);
+            this.ClientSize = new System.Drawing.Size(1050, 594);
             this.Controls.Add(this.gunaControlBox2);
             this.Controls.Add(this.gunaControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DS_admin";
-            this.Text = "DS_admin";
-            this.Load += new System.EventHandler(this.DS_admin_Load);
+            this.Name = "SIKS_admin";
+            this.Text = "SIKS_admin";
+            this.Load += new System.EventHandler(this.SIKS_admin_Load);
             this.ResumeLayout(false);
 
         }

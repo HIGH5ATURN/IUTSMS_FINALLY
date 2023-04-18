@@ -101,6 +101,12 @@
     <Compile Include="PS_admin.Designer.cs">
       <DependentUpon>PS_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="SIKS_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIKS_admin.Designer.cs">
+      <DependentUpon>SIKS_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="society_info_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </Compile>
     <EmbeddedResource Include="PS_admin.resx">
       <DependentUpon>PS_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIKS_admin.resx">
+      <DependentUpon>SIKS_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="society_info_Form.resx">
       <DependentUpon>society_info_Form.cs</DependentUpon>
