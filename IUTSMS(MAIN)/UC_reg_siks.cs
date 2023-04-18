@@ -22,6 +22,7 @@ namespace IUTSMS_MAIN_
             timer1.Start();
         }
 
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             pbar.Value += 1;

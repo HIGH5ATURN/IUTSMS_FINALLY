@@ -55,5 +55,33 @@ namespace IUTSMS_MAIN_
             this.Hide();
             new Form1().Show();
         }
+
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            if(admin_login_combobox.Text=="IUTCS")
+            {
+                if(login_u_id_textBox.Text=="admincs" && login_pass_textBox.Text=="passcs")
+                {
+                    //will take to CS_admin_form
+                }
+                else
+                {
+                    throw new Exception("Invalid Username or password!");
+                }
+            }
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (login_pass_textBox.UseSystemPasswordChar)
+            {
+                login_pass_textBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                login_pass_textBox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

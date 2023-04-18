@@ -17,6 +17,7 @@ namespace IUTSMS_MAIN_
             InitializeComponent();
         }
 
+        
         private void Student_Form_Load(object sender, EventArgs e)
         {
             WinAPI.AnimateWindow(this.Handle, 500, WinAPI.BLEND);
