@@ -70,6 +70,40 @@ namespace IUTSMS_MAIN_
                 }
             }
 
+            else if (admin_login_combobox.Text == "IUTPS")
+            {
+                if (login_u_id_textBox.Text == "adminps" && login_pass_textBox.Text == "passps")
+                {
+                    //will take to PS_admin_form
+                }
+                else
+                {
+                    throw new Exception("Invalid Username or password!");
+                }
+            }
+            else if (admin_login_combobox.Text == "IUTSIKS")
+            {
+                if (login_u_id_textBox.Text == "adminsiks" && login_pass_textBox.Text == "passsiks")
+                {
+                    //will take to SIKS_admin_form
+                }
+                else
+                {
+                    throw new Exception("Invalid Username or password!");
+                }
+            }
+            else if (admin_login_combobox.Text == "IUTDS")
+            {
+                if (login_u_id_textBox.Text == "adminds" && login_pass_textBox.Text == "passds")
+                {
+                    //will take to DS_admin_form
+                }
+                else
+                {
+                    throw new Exception("Invalid Username or password!");
+                }
+            }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
