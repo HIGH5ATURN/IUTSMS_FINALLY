@@ -62,7 +62,8 @@ namespace IUTSMS_MAIN_
             {
                 if(login_u_id_textBox.Text=="admincs" && login_pass_textBox.Text=="passcs")
                 {
-                    //will take to CS_admin_form
+                   new CS_admin().Show();
+                    this.Hide();
                 }
                 else
                 {
