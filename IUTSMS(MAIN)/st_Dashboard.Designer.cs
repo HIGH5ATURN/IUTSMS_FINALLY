@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_dept = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.joind_club_listBox = new System.Windows.Forms.ListBox();
             this.club_suggest_listBox = new System.Windows.Forms.ListBox();
@@ -58,40 +58,43 @@
             this.label3 = new System.Windows.Forms.Label();
             this.islamic_literature_checkbox = new System.Windows.Forms.CheckBox();
             this.Clear_Button = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_dept = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label6
+            // lbl_dept
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
-            this.label6.Location = new System.Drawing.Point(17, 153);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 38);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Dept: ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_dept.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.lbl_dept.Location = new System.Drawing.Point(17, 150);
+            this.lbl_dept.Name = "lbl_dept";
+            this.lbl_dept.Size = new System.Drawing.Size(91, 38);
+            this.lbl_dept.TabIndex = 12;
+            this.lbl_dept.Text = "Dept: ";
+            this.lbl_dept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lbl_name
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
-            this.label5.Location = new System.Drawing.Point(3, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 38);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Name: ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_name.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.lbl_name.Location = new System.Drawing.Point(3, 65);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(105, 38);
+            this.lbl_name.TabIndex = 11;
+            this.lbl_name.Text = "Name: ";
+            this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbl_id
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
-            this.label4.Location = new System.Drawing.Point(50, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 38);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "ID: ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_id.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.lbl_id.Location = new System.Drawing.Point(50, 108);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(58, 38);
+            this.lbl_id.TabIndex = 10;
+            this.lbl_id.Text = "ID: ";
+            this.lbl_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -448,10 +451,40 @@
             this.Clear_Button.Text = "Clear";
             this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
+            // txt_name
+            // 
+            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(114, 69);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(270, 27);
+            this.txt_name.TabIndex = 77;
+            // 
+            // txt_id
+            // 
+            this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_id.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id.Location = new System.Drawing.Point(114, 116);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(270, 27);
+            this.txt_id.TabIndex = 78;
+            // 
+            // txt_dept
+            // 
+            this.txt_dept.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_dept.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dept.Location = new System.Drawing.Point(114, 158);
+            this.txt_dept.Name = "txt_dept";
+            this.txt_dept.Size = new System.Drawing.Size(270, 27);
+            this.txt_dept.TabIndex = 79;
+            // 
             // st_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txt_dept);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.txt_name);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.islamic_literature_checkbox);
             this.Controls.Add(this.club_suggest_listBox);
@@ -479,22 +512,23 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.joind_club_listBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_dept);
+            this.Controls.Add(this.lbl_name);
+            this.Controls.Add(this.lbl_id);
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "st_Dashboard";
             this.Size = new System.Drawing.Size(1220, 778);
             this.Load += new System.EventHandler(this.st_Dashboard_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_dept;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox joind_club_listBox;
         private System.Windows.Forms.ListBox club_suggest_listBox;
@@ -522,5 +556,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox islamic_literature_checkbox;
         private Guna.UI.WinForms.GunaGradientTileButton Clear_Button;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_dept;
     }
 }

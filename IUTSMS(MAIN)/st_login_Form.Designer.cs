@@ -221,6 +221,7 @@
             this.login_u_id_textBox.Name = "login_u_id_textBox";
             this.login_u_id_textBox.Size = new System.Drawing.Size(373, 31);
             this.login_u_id_textBox.TabIndex = 23;
+            this.login_u_id_textBox.TextChanged += new System.EventHandler(this.login_u_id_textBox_TextChanged);
             // 
             // panel2
             // 

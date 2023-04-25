@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,53 @@ namespace IUTSMS_MAIN_
         {
             InitializeComponent();
         }
+        //now adding databse--->
+
+        OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source =dbst.accdb");
+
+        OleDbCommand cmd = new OleDbCommand();
+
+        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void st_Dashboard_Load(object sender, EventArgs e)
         {
             WinAPI.AnimateWindow(this.Handle, 500, WinAPI.BLEND);
+
+            try
+            {
+
+
+                conn.Open();
+
+
+                string t = "Select * from st_info where st_id=" + st_login_Form.id + "";
+
+                cmd = new OleDbCommand(t, conn);
+                OleDbDataReader dr;
+
+                dr = cmd.ExecuteReader();
+
+
+                if (dr.Read())
+                {
+                   // MessageBox.Show(st_login_Form.id);
+
+                    txt_name.Text =  dr["naam"].ToString();
+
+                   txt_id.Text = st_login_Form.id;
+
+                    txt_dept.Text = dr["dept"].ToString();
+                }
+
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
 

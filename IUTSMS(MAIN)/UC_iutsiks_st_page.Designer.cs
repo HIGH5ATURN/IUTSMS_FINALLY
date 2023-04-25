@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_iutsiks_st_page));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fb_button = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.Read_Hadith_Button = new Guna.UI.WinForms.GunaGradientTileButton();
             this.Read_Quran_Button = new Guna.UI.WinForms.GunaGradientTileButton();
@@ -44,7 +46,6 @@
             this.donation_bank_account_no_textbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.siks_notice_listBox = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,12 +64,12 @@
             this.zakah_bank_balance_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.fb_button = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.dgwNotices = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -86,6 +87,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.dgwNotices);
             this.panel1.Controls.Add(this.fb_button);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.gunaCirclePictureBox1);
@@ -101,12 +103,51 @@
             this.panel1.Controls.Add(this.donation_bank_account_no_textbox);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.siks_notice_listBox);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(0, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1151, 671);
             this.panel1.TabIndex = 27;
+            // 
+            // fb_button
+            // 
+            this.fb_button.Animated = true;
+            this.fb_button.AnimationHoverSpeed = 0.07F;
+            this.fb_button.AnimationSpeed = 0.03F;
+            this.fb_button.BackColor = System.Drawing.Color.Transparent;
+            this.fb_button.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.fb_button.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.fb_button.BorderColor = System.Drawing.Color.Black;
+            this.fb_button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.fb_button.FocusedColor = System.Drawing.Color.Empty;
+            this.fb_button.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fb_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.Image = ((System.Drawing.Image)(resources.GetObject("fb_button.Image")));
+            this.fb_button.ImageSize = new System.Drawing.Size(52, 52);
+            this.fb_button.Location = new System.Drawing.Point(744, 737);
+            this.fb_button.Name = "fb_button";
+            this.fb_button.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.fb_button.OnHoverForeColor = System.Drawing.Color.White;
+            this.fb_button.OnHoverImage = null;
+            this.fb_button.OnPressedColor = System.Drawing.Color.Black;
+            this.fb_button.Radius = 10;
+            this.fb_button.Size = new System.Drawing.Size(73, 65);
+            this.fb_button.TabIndex = 63;
+            this.fb_button.Click += new System.EventHandler(this.fb_button_Click);
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.label9.Location = new System.Drawing.Point(678, 673);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(206, 30);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Connect With Us";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaCirclePictureBox1
             // 
@@ -296,21 +337,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.label1.Location = new System.Drawing.Point(613, 16);
+            this.label1.Location = new System.Drawing.Point(593, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 30);
             this.label1.TabIndex = 29;
             this.label1.Text = "Notice Board";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // siks_notice_listBox
-            // 
-            this.siks_notice_listBox.FormattingEnabled = true;
-            this.siks_notice_listBox.ItemHeight = 16;
-            this.siks_notice_listBox.Location = new System.Drawing.Point(495, 49);
-            this.siks_notice_listBox.Name = "siks_notice_listBox";
-            this.siks_notice_listBox.Size = new System.Drawing.Size(484, 276);
-            this.siks_notice_listBox.TabIndex = 28;
             // 
             // panel4
             // 
@@ -567,45 +599,21 @@
             this.gunaCirclePictureBox2.TabStop = false;
             this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
-            // label9
+            // dgwNotices
             // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.label9.Location = new System.Drawing.Point(678, 673);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 30);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Connect With Us";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // fb_button
-            // 
-            this.fb_button.Animated = true;
-            this.fb_button.AnimationHoverSpeed = 0.07F;
-            this.fb_button.AnimationSpeed = 0.03F;
-            this.fb_button.BackColor = System.Drawing.Color.Transparent;
-            this.fb_button.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.fb_button.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.fb_button.BorderColor = System.Drawing.Color.Black;
-            this.fb_button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.fb_button.FocusedColor = System.Drawing.Color.Empty;
-            this.fb_button.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fb_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.Image = ((System.Drawing.Image)(resources.GetObject("fb_button.Image")));
-            this.fb_button.ImageSize = new System.Drawing.Size(52, 52);
-            this.fb_button.Location = new System.Drawing.Point(744, 737);
-            this.fb_button.Name = "fb_button";
-            this.fb_button.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.fb_button.OnHoverForeColor = System.Drawing.Color.White;
-            this.fb_button.OnHoverImage = null;
-            this.fb_button.OnPressedColor = System.Drawing.Color.Black;
-            this.fb_button.Radius = 10;
-            this.fb_button.Size = new System.Drawing.Size(73, 65);
-            this.fb_button.TabIndex = 63;
-            this.fb_button.Click += new System.EventHandler(this.fb_button_Click);
+            this.dgwNotices.AllowUserToAddRows = false;
+            this.dgwNotices.AllowUserToDeleteRows = false;
+            this.dgwNotices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwNotices.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgwNotices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwNotices.Location = new System.Drawing.Point(440, 61);
+            this.dgwNotices.Name = "dgwNotices";
+            this.dgwNotices.ReadOnly = true;
+            this.dgwNotices.RowHeadersWidth = 51;
+            this.dgwNotices.RowTemplate.Height = 24;
+            this.dgwNotices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwNotices.Size = new System.Drawing.Size(553, 338);
+            this.dgwNotices.TabIndex = 80;
             // 
             // UC_iutsiks_st_page
             // 
@@ -617,12 +625,14 @@
             this.Controls.Add(this.label2);
             this.Name = "UC_iutsiks_st_page";
             this.Size = new System.Drawing.Size(1152, 762);
+            this.Load += new System.EventHandler(this.UC_iutsiks_st_page_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -631,7 +641,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox siks_notice_listBox;
         private System.Windows.Forms.TextBox donation_bank_account_no_textbox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
@@ -664,5 +673,6 @@
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
         private System.Windows.Forms.Label label9;
         private Guna.UI.WinForms.GunaGradientTileButton fb_button;
+        private System.Windows.Forms.DataGridView dgwNotices;
     }
 }

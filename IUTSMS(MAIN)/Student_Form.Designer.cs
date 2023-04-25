@@ -40,13 +40,15 @@
             this.Login_LinkLabel = new Guna.UI.WinForms.GunaLinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.login_button = new Guna.UI.WinForms.GunaGradientTileButton();
             this.st_reg_ComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.st_reg_id_textbox = new Guna.UI.WinForms.GunaTextBox();
             this.st_reg_name_textbox = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.st_reg_conf_pass_textbox = new Guna.UI.WinForms.GunaTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.register_button = new Guna.UI.WinForms.GunaGradientTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +122,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.register_button);
+            this.panel1.Controls.Add(this.st_reg_conf_pass_textbox);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.st_reg_pass_TextBox);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.society_info_LinkLabel);
@@ -127,7 +132,6 @@
             this.panel1.Controls.Add(this.Login_LinkLabel);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.login_button);
             this.panel1.Controls.Add(this.st_reg_ComboBox);
             this.panel1.Controls.Add(this.st_reg_id_textbox);
             this.panel1.Controls.Add(this.st_reg_name_textbox);
@@ -149,7 +153,7 @@
             this.st_reg_pass_TextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
             this.st_reg_pass_TextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.st_reg_pass_TextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.st_reg_pass_TextBox.Location = new System.Drawing.Point(252, 471);
+            this.st_reg_pass_TextBox.Location = new System.Drawing.Point(277, 466);
             this.st_reg_pass_TextBox.Name = "st_reg_pass_TextBox";
             this.st_reg_pass_TextBox.PasswordChar = '\0';
             this.st_reg_pass_TextBox.Radius = 10;
@@ -162,7 +166,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(117, 466);
+            this.label8.Location = new System.Drawing.Point(127, 461);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 38);
             this.label8.TabIndex = 21;
@@ -174,7 +178,7 @@
             this.society_info_LinkLabel.AutoSize = true;
             this.society_info_LinkLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.society_info_LinkLabel.LinkColor = System.Drawing.SystemColors.Control;
-            this.society_info_LinkLabel.Location = new System.Drawing.Point(538, 749);
+            this.society_info_LinkLabel.Location = new System.Drawing.Point(563, 779);
             this.society_info_LinkLabel.Name = "society_info_LinkLabel";
             this.society_info_LinkLabel.Size = new System.Drawing.Size(104, 28);
             this.society_info_LinkLabel.TabIndex = 20;
@@ -187,7 +191,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(143, 696);
+            this.label3.Location = new System.Drawing.Point(168, 726);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(512, 38);
             this.label3.TabIndex = 19;
@@ -200,7 +204,7 @@
             this.Login_LinkLabel.AutoSize = true;
             this.Login_LinkLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_LinkLabel.LinkColor = System.Drawing.SystemColors.Control;
-            this.Login_LinkLabel.Location = new System.Drawing.Point(571, 649);
+            this.Login_LinkLabel.Location = new System.Drawing.Point(596, 679);
             this.Login_LinkLabel.Name = "Login_LinkLabel";
             this.Login_LinkLabel.Size = new System.Drawing.Size(71, 28);
             this.Login_LinkLabel.TabIndex = 18;
@@ -213,7 +217,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(398, 601);
+            this.label7.Location = new System.Drawing.Point(423, 631);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(257, 38);
             this.label7.TabIndex = 17;
@@ -223,40 +227,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(301, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(326, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 268);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // login_button
-            // 
-            this.login_button.Animated = true;
-            this.login_button.AnimationHoverSpeed = 0.07F;
-            this.login_button.AnimationSpeed = 0.03F;
-            this.login_button.BackColor = System.Drawing.Color.Transparent;
-            this.login_button.BaseColor1 = System.Drawing.SystemColors.Control;
-            this.login_button.BaseColor2 = System.Drawing.Color.NavajoWhite;
-            this.login_button.BorderColor = System.Drawing.Color.Black;
-            this.login_button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.login_button.FocusedColor = System.Drawing.Color.Empty;
-            this.login_button.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_button.ForeColor = System.Drawing.Color.Black;
-            this.login_button.Image = null;
-            this.login_button.ImageSize = new System.Drawing.Size(52, 52);
-            this.login_button.Location = new System.Drawing.Point(252, 537);
-            this.login_button.Name = "login_button";
-            this.login_button.OnHoverBaseColor1 = System.Drawing.Color.NavajoWhite;
-            this.login_button.OnHoverBaseColor2 = System.Drawing.SystemColors.Control;
-            this.login_button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.login_button.OnHoverForeColor = System.Drawing.Color.Black;
-            this.login_button.OnHoverImage = null;
-            this.login_button.OnPressedColor = System.Drawing.Color.Black;
-            this.login_button.Radius = 20;
-            this.login_button.Size = new System.Drawing.Size(403, 51);
-            this.login_button.TabIndex = 15;
-            this.login_button.Text = "Register";
             // 
             // st_reg_ComboBox
             // 
@@ -275,7 +251,7 @@
             "CEE",
             "MCE",
             "BTM"});
-            this.st_reg_ComboBox.Location = new System.Drawing.Point(252, 419);
+            this.st_reg_ComboBox.Location = new System.Drawing.Point(277, 414);
             this.st_reg_ComboBox.Name = "st_reg_ComboBox";
             this.st_reg_ComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
             this.st_reg_ComboBox.OnHoverItemForeColor = System.Drawing.SystemColors.Control;
@@ -293,7 +269,7 @@
             this.st_reg_id_textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
             this.st_reg_id_textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.st_reg_id_textbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.st_reg_id_textbox.Location = new System.Drawing.Point(252, 366);
+            this.st_reg_id_textbox.Location = new System.Drawing.Point(277, 361);
             this.st_reg_id_textbox.Name = "st_reg_id_textbox";
             this.st_reg_id_textbox.PasswordChar = '\0';
             this.st_reg_id_textbox.Radius = 10;
@@ -311,7 +287,7 @@
             this.st_reg_name_textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
             this.st_reg_name_textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.st_reg_name_textbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.st_reg_name_textbox.Location = new System.Drawing.Point(252, 319);
+            this.st_reg_name_textbox.Location = new System.Drawing.Point(277, 314);
             this.st_reg_name_textbox.Name = "st_reg_name_textbox";
             this.st_reg_name_textbox.PasswordChar = '\0';
             this.st_reg_name_textbox.Radius = 10;
@@ -324,7 +300,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(84, 416);
+            this.label6.Location = new System.Drawing.Point(94, 409);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(179, 38);
             this.label6.TabIndex = 9;
@@ -336,7 +312,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(158, 314);
+            this.label5.Location = new System.Drawing.Point(168, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 38);
             this.label5.TabIndex = 8;
@@ -348,19 +324,78 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(205, 361);
+            this.label4.Location = new System.Drawing.Point(112, 356);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 38);
+            this.label4.Size = new System.Drawing.Size(161, 38);
             this.label4.TabIndex = 7;
-            this.label4.Text = "ID: ";
+            this.label4.Text = "Student ID: ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // st_reg_conf_pass_textbox
+            // 
+            this.st_reg_conf_pass_textbox.BackColor = System.Drawing.Color.Transparent;
+            this.st_reg_conf_pass_textbox.BaseColor = System.Drawing.SystemColors.Control;
+            this.st_reg_conf_pass_textbox.BorderColor = System.Drawing.SystemColors.Control;
+            this.st_reg_conf_pass_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.st_reg_conf_pass_textbox.FocusedBaseColor = System.Drawing.SystemColors.Control;
+            this.st_reg_conf_pass_textbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
+            this.st_reg_conf_pass_textbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.st_reg_conf_pass_textbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.st_reg_conf_pass_textbox.Location = new System.Drawing.Point(277, 518);
+            this.st_reg_conf_pass_textbox.Name = "st_reg_conf_pass_textbox";
+            this.st_reg_conf_pass_textbox.PasswordChar = '\0';
+            this.st_reg_conf_pass_textbox.Radius = 10;
+            this.st_reg_conf_pass_textbox.SelectedText = "";
+            this.st_reg_conf_pass_textbox.Size = new System.Drawing.Size(403, 33);
+            this.st_reg_conf_pass_textbox.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(20, 513);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 38);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Confirm Password: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // register_button
+            // 
+            this.register_button.Animated = true;
+            this.register_button.AnimationHoverSpeed = 0.07F;
+            this.register_button.AnimationSpeed = 0.03F;
+            this.register_button.BackColor = System.Drawing.Color.Transparent;
+            this.register_button.BaseColor1 = System.Drawing.Color.Teal;
+            this.register_button.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
+            this.register_button.BorderColor = System.Drawing.Color.Black;
+            this.register_button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.register_button.FocusedColor = System.Drawing.Color.Empty;
+            this.register_button.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_button.ForeColor = System.Drawing.Color.White;
+            this.register_button.Image = null;
+            this.register_button.ImageSize = new System.Drawing.Size(52, 52);
+            this.register_button.Location = new System.Drawing.Point(277, 575);
+            this.register_button.Name = "register_button";
+            this.register_button.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
+            this.register_button.OnHoverBaseColor2 = System.Drawing.Color.Teal;
+            this.register_button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.register_button.OnHoverForeColor = System.Drawing.Color.White;
+            this.register_button.OnHoverImage = null;
+            this.register_button.OnPressedColor = System.Drawing.Color.Black;
+            this.register_button.Radius = 20;
+            this.register_button.Size = new System.Drawing.Size(403, 53);
+            this.register_button.TabIndex = 25;
+            this.register_button.Text = "Register";
+            this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
             // Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(799, 864);
+            this.ClientSize = new System.Drawing.Size(799, 921);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.admin_back_Button);
             this.Controls.Add(this.gunaControlBox2);
@@ -391,7 +426,6 @@
         private Guna.UI.WinForms.GunaLinkLabel Login_LinkLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI.WinForms.GunaGradientTileButton login_button;
         private Guna.UI.WinForms.GunaComboBox st_reg_ComboBox;
         private Guna.UI.WinForms.GunaTextBox st_reg_id_textbox;
         private Guna.UI.WinForms.GunaTextBox st_reg_name_textbox;
@@ -400,5 +434,8 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaTextBox st_reg_pass_TextBox;
         private System.Windows.Forms.Label label8;
+        private Guna.UI.WinForms.GunaTextBox st_reg_conf_pass_textbox;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaGradientTileButton register_button;
     }
 }

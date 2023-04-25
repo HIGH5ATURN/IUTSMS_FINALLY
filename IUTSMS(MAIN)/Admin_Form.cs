@@ -58,56 +58,62 @@ namespace IUTSMS_MAIN_
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            if(admin_login_combobox.Text=="IUTCS")
+            try
             {
-                if(login_u_id_textBox.Text=="admincs" && login_pass_textBox.Text=="passcs")
+                if (admin_login_combobox.Text == "IUTCS")
                 {
-                   new CS_admin().Show();
-                   this.Hide();
+                    if (login_u_id_textBox.Text == "admincs" && login_pass_textBox.Text == "passcs")
+                    {
+                        new CS_admin().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        throw new Exception("Invalid Username or password!");
+                    }
                 }
-                else
-                {
-                    throw new Exception("Invalid Username or password!");
-                }
-            }
 
-            else if (admin_login_combobox.Text == "IUTPS")
-            {
-                if (login_u_id_textBox.Text == "adminps" && login_pass_textBox.Text == "passps")
+                else if (admin_login_combobox.Text == "IUTPS")
                 {
-                    new PS_admin().Show();
-                    this.Hide();
+                    if (login_u_id_textBox.Text == "adminps" && login_pass_textBox.Text == "passps")
+                    {
+                        new PS_admin().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        throw new Exception("Invalid Username or password!");
+                    }
                 }
-                else
+                else if (admin_login_combobox.Text == "IUTSIKS")
                 {
-                    throw new Exception("Invalid Username or password!");
+                    if (login_u_id_textBox.Text == "adminsiks" && login_pass_textBox.Text == "passsiks")
+                    {
+                        new SIKS_admin().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        throw new Exception("Invalid Username or password!");
+                    }
+                }
+                else if (admin_login_combobox.Text == "IUTDS")
+                {
+                    if (login_u_id_textBox.Text == "adminds" && login_pass_textBox.Text == "passds")
+                    {
+                        new DS_admin().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        throw new Exception("Invalid Username or password!");
+                    }
                 }
             }
-            else if (admin_login_combobox.Text == "IUTSIKS")
+            catch(Exception ex)
             {
-                if (login_u_id_textBox.Text == "adminsiks" && login_pass_textBox.Text == "passsiks")
-                {
-                    new SIKS_admin().Show();
-                    this.Hide();
-                }
-                else
-                {
-                    throw new Exception("Invalid Username or password!");
-                }
+                MessageBox.Show(ex.Message);
             }
-            else if (admin_login_combobox.Text == "IUTDS")
-            {
-                if (login_u_id_textBox.Text == "adminds" && login_pass_textBox.Text == "passds")
-                {
-                    new DS_admin().Show();
-                    this.Hide();
-                }
-                else
-                {
-                    throw new Exception("Invalid Username or password!");
-                }
-            }
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

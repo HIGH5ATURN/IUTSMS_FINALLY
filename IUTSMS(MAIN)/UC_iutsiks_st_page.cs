@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -94,6 +95,31 @@ namespace IUTSMS_MAIN_
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/iutsiks");
 
+        }
+        //adding the database-->
+        OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source =dbst.accdb");
+
+        OleDbCommand cmd = new OleDbCommand();
+
+        OleDbDataAdapter adapter = new OleDbDataAdapter();
+        DataTable dt;
+        void GetNotices()
+        {
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source =dbst.accdb");
+
+            dt = new DataTable();
+
+            adapter = new OleDbDataAdapter("SELECT * FROM siks_notice", conn);
+
+            conn.Open();
+            adapter.Fill(dt);
+            dgwNotices.DataSource = dt;
+            conn.Close();
+        }
+
+        private void UC_iutsiks_st_page_Load(object sender, EventArgs e)
+        {
+            GetNotices();
         }
     }
 }

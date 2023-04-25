@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Diagnostics.Eventing.Reader;
 
 namespace IUTSMS_MAIN_
 {
@@ -87,5 +90,55 @@ namespace IUTSMS_MAIN_
         {
 
         }
+        //Now adding databse--->
+
+
+        OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source =dbst.accdb");
+
+        OleDbCommand cmd = new OleDbCommand();
+
+        OleDbDataAdapter da = new OleDbDataAdapter();
+        private void register_button_Click(object sender, EventArgs e)
+        {
+            if (st_reg_pass_TextBox.Text == st_reg_conf_pass_textbox.Text)
+            {
+
+                try
+                {
+
+
+                    conn.Open();
+
+
+                    string t = "INSERT INTO st_info (naam, st_id,dept,passu) VALUES" + "(@name,@id,@dp,@pass)";
+
+                    cmd = new OleDbCommand(t, conn);
+
+                    cmd.Parameters.AddWithValue("@name", st_reg_name_textbox.Text);
+                    cmd.Parameters.AddWithValue("@id", st_reg_id_textbox.Text);
+                    cmd.Parameters.AddWithValue("@dp", st_reg_ComboBox.Text);
+                    cmd.Parameters.AddWithValue("@pass", st_reg_pass_TextBox.Text);
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    MessageBox.Show("You've Registered in the System Successfully!");
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Password mismatch!");
+                st_reg_conf_pass_textbox.Clear();
+                st_reg_pass_TextBox.Clear();
+            }
+        }
+       
     }
 }
