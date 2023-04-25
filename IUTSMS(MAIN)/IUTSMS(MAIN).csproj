@@ -139,6 +139,7 @@
     <Compile Include="stdnt_club_dash.Designer.cs">
       <DependentUpon>stdnt_club_dash.cs</DependentUpon>
     </Compile>
+    <Compile Include="student.cs" />
     <Compile Include="Student_Form.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 558);
+            this.ClientSize = new System.Drawing.Size(1217, 572);
             this.Controls.Add(this.gunaControlBox2);
             this.Controls.Add(this.gunaControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

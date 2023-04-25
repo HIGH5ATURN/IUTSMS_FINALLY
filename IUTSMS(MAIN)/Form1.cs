@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Data.OleDb;
+
 namespace IUTSMS_MAIN_
 {
     public partial class Form1 : Form
@@ -17,17 +20,68 @@ namespace IUTSMS_MAIN_
             InitializeComponent();
         }
 
+        public static List<student> arr_students = new List<student>();
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+        OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source = dbst.accdb");
 
-        
+        OleDbCommand cmd = new OleDbCommand();
+
+       // OleDbDataAdapter da = new OleDbDataAdapter();
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
             WinAPI.AnimateWindow(this.Handle, 500, WinAPI.BLEND);
+            arr_students.Clear();
+            fill_regst_list();
+
         }
+
+
+
+        void fill_regst_list()
+        {
+            try
+            {
+
+
+                conn.Open();
+
+
+                string t = "Select * from st_info";
+
+                cmd = new OleDbCommand(t, conn);
+                OleDbDataReader dr;
+
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+
+
+                    student st = new student(dr["naam"].ToString(), dr["dept"].ToString(), Convert.ToInt32(dr["st_id"].ToString()));
+                    
+                    arr_students.Add(st);
+
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+
+
+
         //to move form_1 using mouse this code is necessary
         private bool dragging =false;
         private Point startPoint = new Point(0,0);

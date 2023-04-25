@@ -61,6 +61,7 @@
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.txt_dept = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_dept
@@ -454,6 +455,7 @@
             // txt_name
             // 
             this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_name.Enabled = false;
             this.txt_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.Location = new System.Drawing.Point(114, 69);
             this.txt_name.Name = "txt_name";
@@ -463,6 +465,7 @@
             // txt_id
             // 
             this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_id.Enabled = false;
             this.txt_id.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id.Location = new System.Drawing.Point(114, 116);
             this.txt_id.Name = "txt_id";
@@ -472,16 +475,29 @@
             // txt_dept
             // 
             this.txt_dept.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_dept.Enabled = false;
             this.txt_dept.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dept.Location = new System.Drawing.Point(114, 158);
             this.txt_dept.Name = "txt_dept";
             this.txt_dept.Size = new System.Drawing.Size(270, 27);
             this.txt_dept.TabIndex = 79;
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.label4.Location = new System.Drawing.Point(459, 734);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(220, 19);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Note: The order is Descending";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // st_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_dept);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.txt_name);
@@ -515,6 +531,7 @@
             this.Controls.Add(this.lbl_dept);
             this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.lbl_id);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "st_Dashboard";
             this.Size = new System.Drawing.Size(1220, 778);
@@ -559,5 +576,6 @@
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.TextBox txt_dept;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_iutsiks_st_page));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgwNotices = new System.Windows.Forms.DataGridView();
             this.fb_button = new Guna.UI.WinForms.GunaGradientTileButton();
             this.label9 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -64,12 +65,11 @@
             this.zakah_bank_balance_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.dgwNotices = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -108,6 +108,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1151, 671);
             this.panel1.TabIndex = 27;
+            // 
+            // dgwNotices
+            // 
+            this.dgwNotices.AllowUserToAddRows = false;
+            this.dgwNotices.AllowUserToDeleteRows = false;
+            this.dgwNotices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwNotices.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgwNotices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwNotices.Location = new System.Drawing.Point(440, 61);
+            this.dgwNotices.Name = "dgwNotices";
+            this.dgwNotices.ReadOnly = true;
+            this.dgwNotices.RowHeadersWidth = 51;
+            this.dgwNotices.RowTemplate.Height = 24;
+            this.dgwNotices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwNotices.Size = new System.Drawing.Size(553, 338);
+            this.dgwNotices.TabIndex = 80;
             // 
             // fb_button
             // 
@@ -599,22 +615,6 @@
             this.gunaCirclePictureBox2.TabStop = false;
             this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
-            // dgwNotices
-            // 
-            this.dgwNotices.AllowUserToAddRows = false;
-            this.dgwNotices.AllowUserToDeleteRows = false;
-            this.dgwNotices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwNotices.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgwNotices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwNotices.Location = new System.Drawing.Point(440, 61);
-            this.dgwNotices.Name = "dgwNotices";
-            this.dgwNotices.ReadOnly = true;
-            this.dgwNotices.RowHeadersWidth = 51;
-            this.dgwNotices.RowTemplate.Height = 24;
-            this.dgwNotices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwNotices.Size = new System.Drawing.Size(553, 338);
-            this.dgwNotices.TabIndex = 80;
-            // 
             // UC_iutsiks_st_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -628,11 +628,11 @@
             this.Load += new System.EventHandler(this.UC_iutsiks_st_page_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwNotices)).EndInit();
             this.ResumeLayout(false);
 
         }
