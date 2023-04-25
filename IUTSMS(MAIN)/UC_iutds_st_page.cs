@@ -16,5 +16,17 @@ namespace IUTSMS_MAIN_
         {
             InitializeComponent();
         }
+
+        private void Read_Quran_Button_Click(object sender, EventArgs e)
+        {
+   
+
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=cqoNQP4IcyU&list=PL1pf33qWCkmisHCMKSfN8y0dfLFwDIQAM");
+        }
+
+        private void fb_button_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/iutdebatingsociety/");
+        }
     }
 }

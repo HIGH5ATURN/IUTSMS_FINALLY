@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_iutcs_st_page));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fb_button = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btn_rcs_web = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btn_rcs_cp = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -40,9 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgwNotices = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.fb_button = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
@@ -70,6 +70,75 @@
             this.panel1.Size = new System.Drawing.Size(1015, 637);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // fb_button
+            // 
+            this.fb_button.Animated = true;
+            this.fb_button.AnimationHoverSpeed = 0.07F;
+            this.fb_button.AnimationSpeed = 0.03F;
+            this.fb_button.BackColor = System.Drawing.Color.Transparent;
+            this.fb_button.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.fb_button.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.fb_button.BorderColor = System.Drawing.Color.Black;
+            this.fb_button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.fb_button.FocusedColor = System.Drawing.Color.Empty;
+            this.fb_button.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fb_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.Image = ((System.Drawing.Image)(resources.GetObject("fb_button.Image")));
+            this.fb_button.ImageSize = new System.Drawing.Size(52, 52);
+            this.fb_button.Location = new System.Drawing.Point(670, 797);
+            this.fb_button.Name = "fb_button";
+            this.fb_button.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
+            this.fb_button.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.fb_button.OnHoverForeColor = System.Drawing.Color.White;
+            this.fb_button.OnHoverImage = null;
+            this.fb_button.OnPressedColor = System.Drawing.Color.Black;
+            this.fb_button.Radius = 10;
+            this.fb_button.Size = new System.Drawing.Size(73, 65);
+            this.fb_button.TabIndex = 97;
+            this.fb_button.Click += new System.EventHandler(this.fb_button_Click);
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.label9.Location = new System.Drawing.Point(604, 733);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(206, 30);
+            this.label9.TabIndex = 96;
+            this.label9.Text = "Connect With Us";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaGradientTileButton1
+            // 
+            this.gunaGradientTileButton1.Animated = true;
+            this.gunaGradientTileButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
+            this.gunaGradientTileButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
+            this.gunaGradientTileButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton1.Enabled = false;
+            this.gunaGradientTileButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientTileButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaGradientTileButton1.Image = null;
+            this.gunaGradientTileButton1.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton1.Location = new System.Drawing.Point(78, 733);
+            this.gunaGradientTileButton1.Name = "gunaGradientTileButton1";
+            this.gunaGradientTileButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.gunaGradientTileButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
+            this.gunaGradientTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientTileButton1.OnHoverImage = null;
+            this.gunaGradientTileButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.Size = new System.Drawing.Size(235, 62);
+            this.gunaGradientTileButton1.TabIndex = 95;
+            this.gunaGradientTileButton1.Text = "Resource for JAVA";
+            this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
             // 
             // btn_rcs_web
             // 
@@ -257,75 +326,6 @@
             this.label1.TabIndex = 84;
             this.label1.Text = "Notice Board";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gunaGradientTileButton1
-            // 
-            this.gunaGradientTileButton1.Animated = true;
-            this.gunaGradientTileButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
-            this.gunaGradientTileButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(73)))));
-            this.gunaGradientTileButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton1.Enabled = false;
-            this.gunaGradientTileButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientTileButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton1.Image = null;
-            this.gunaGradientTileButton1.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaGradientTileButton1.Location = new System.Drawing.Point(78, 733);
-            this.gunaGradientTileButton1.Name = "gunaGradientTileButton1";
-            this.gunaGradientTileButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
-            this.gunaGradientTileButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(51)))));
-            this.gunaGradientTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton1.OnHoverImage = null;
-            this.gunaGradientTileButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton1.Size = new System.Drawing.Size(235, 62);
-            this.gunaGradientTileButton1.TabIndex = 95;
-            this.gunaGradientTileButton1.Text = "Resource for JAVA";
-            this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
-            // 
-            // fb_button
-            // 
-            this.fb_button.Animated = true;
-            this.fb_button.AnimationHoverSpeed = 0.07F;
-            this.fb_button.AnimationSpeed = 0.03F;
-            this.fb_button.BackColor = System.Drawing.Color.Transparent;
-            this.fb_button.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.fb_button.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.fb_button.BorderColor = System.Drawing.Color.Black;
-            this.fb_button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.fb_button.FocusedColor = System.Drawing.Color.Empty;
-            this.fb_button.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fb_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.Image = ((System.Drawing.Image)(resources.GetObject("fb_button.Image")));
-            this.fb_button.ImageSize = new System.Drawing.Size(52, 52);
-            this.fb_button.Location = new System.Drawing.Point(670, 797);
-            this.fb_button.Name = "fb_button";
-            this.fb_button.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(196)))), ((int)(((byte)(141)))));
-            this.fb_button.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.fb_button.OnHoverForeColor = System.Drawing.Color.White;
-            this.fb_button.OnHoverImage = null;
-            this.fb_button.OnPressedColor = System.Drawing.Color.Black;
-            this.fb_button.Radius = 10;
-            this.fb_button.Size = new System.Drawing.Size(73, 65);
-            this.fb_button.TabIndex = 97;
-            this.fb_button.Click += new System.EventHandler(this.fb_button_Click);
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.label9.Location = new System.Drawing.Point(604, 733);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 30);
-            this.label9.TabIndex = 96;
-            this.label9.Text = "Connect With Us";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_iutcs_st_page
             // 
