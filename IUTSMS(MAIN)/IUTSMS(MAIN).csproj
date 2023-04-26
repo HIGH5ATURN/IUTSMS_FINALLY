@@ -127,6 +127,7 @@
     <Compile Include="SIKS_admin.Designer.cs">
       <DependentUpon>SIKS_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Society.cs" />
     <Compile Include="society_info_Form.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -123,6 +123,7 @@ namespace IUTSMS_MAIN_
         {
             bool flag = false;
             //first we will check for two viable options, 1) if the stdnt is already a member, or 2) he isnt yet member
+           /*
             try
             {
                 conn.Open();
@@ -143,6 +144,16 @@ namespace IUTSMS_MAIN_
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }*/
+
+
+            for(int i=0;i<IUTCS.arr_cs_students.Count;i++)
+            {
+                if (IUTCS.arr_cs_students[i].id == Convert.ToInt32(st_login_Form.id))
+                {
+                    flag= true;
+                    break;
+                }
             }
             _obj = this;
 

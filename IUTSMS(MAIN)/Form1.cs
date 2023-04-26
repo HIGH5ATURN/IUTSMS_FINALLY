@@ -40,8 +40,12 @@ namespace IUTSMS_MAIN_
             arr_students.Clear();
             fill_regst_list();
 
-        }
+            IUTCS cs= new IUTCS();
 
+            cs.fill_cs_arr();
+
+
+        }
 
 
         void fill_regst_list()

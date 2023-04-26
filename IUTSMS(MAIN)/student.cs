@@ -20,6 +20,26 @@ namespace IUTSMS_MAIN_
             this.department =department;
             this.id = id;
         }
-        
+
     }
+
+    public class cs_student : student
+    {
+        public string java { get;set; }
+
+        public string cp { get;set; }
+
+        public string webdev { get;set; }
+
+        public cs_student(string name, string department, int id, string java, string cp, string webdev) : base( name, department, id )
+        {
+            this.name=name;
+            this.department=department;
+            this.id=id;
+            this.java = java;
+            this.cp = cp;
+            this.webdev = webdev;
+        }
+    }
+
 }
