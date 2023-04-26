@@ -20,7 +20,7 @@ namespace IUTSMS_MAIN_
             InitializeComponent();
         }
 
-        public static List<student> arr_students = new List<student>();
+        public static List<student> arr_students = new List<student>();//total st in system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -41,7 +41,7 @@ namespace IUTSMS_MAIN_
             fill_regst_list();
 
             IUTCS cs= new IUTCS();
-
+            
             cs.fill_cs_arr();
 
 

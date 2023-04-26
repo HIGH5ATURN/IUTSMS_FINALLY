@@ -17,7 +17,7 @@ namespace IUTSMS_MAIN_
 
     public class IUTCS : Society
     {
-        public static List<cs_student> arr_cs_students = new List<cs_student>();
+        public static List<cs_student> arr_cs_students = new List<cs_student>();//aggregation
 
         OleDbConnection conn = new OleDbConnection("Provider=Microsoft.ACE.OleDb.16.0; Data Source = dbst.accdb");
 
@@ -25,6 +25,7 @@ namespace IUTSMS_MAIN_
 
         public void fill_cs_arr()
         {
+            arr_cs_students.Clear();
             try
             {
 
